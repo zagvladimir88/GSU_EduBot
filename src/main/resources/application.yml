@@ -14,7 +14,7 @@ spring:
 
 rabbit:
   queues:
-    groups: "GROUPS_QUEUE"
-    schedule: "SCHEDULE"
-    notification: "NOTIFICATION"
-    answer-text: "ANSWER_TEXT"
+    - "GROUPS_QUEUE"
+    - "SCHEDULE"
+    - "NOTIFICATION"
+    - "ANSWER_TEXT"

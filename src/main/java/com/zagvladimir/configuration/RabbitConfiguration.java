@@ -9,6 +9,8 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 @Configuration
 @RequiredArgsConstructor
 @EnableConfigurationProperties(RabbitProperties.class)
@@ -23,10 +25,8 @@ public class RabbitConfiguration {
 
     @Bean
     public Declarables queues() {
-        Queue[] queues = rabbitProperties.getQueues().values().stream()
+        return new Declarables(rabbitProperties.getQueues().stream()
                 .map(Queue::new)
-                .toArray(Queue[]::new);
-
-        return new Declarables(queues);
+                .toList());
     }
 }
