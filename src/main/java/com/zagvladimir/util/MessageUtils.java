@@ -7,10 +7,11 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 @Component
 public class MessageUtils {
 
-    public SendMessage createSendMessage(Update update) {
+    public SendMessage createSendMessage(Long chatId, String text) {
         return SendMessage.builder()
-                .chatId(update.getMessage().getChatId())
-                .text(update.getMessage().getText())
+                .chatId(chatId.toString())
+                .text(text)
+                .parseMode("Markdown")
                 .build();
     }
 
@@ -35,4 +36,4 @@ public class MessageUtils {
                 .text(text)
                 .build();
     }
-} 
+}
