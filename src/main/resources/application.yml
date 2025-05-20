@@ -2,7 +2,7 @@ bot:
   token: ${BOT_TOKEN}
   name: ${BOT_NAME}
 server:
-  port: 8080
+  port: 8082
 spring:
   rabbitmq:
     host: localhost
@@ -18,3 +18,4 @@ rabbit:
     - "SCHEDULE"
     - "NOTIFICATION"
     - "ANSWER_TEXT"
+    - "ANSWER_DOCUMENT"
