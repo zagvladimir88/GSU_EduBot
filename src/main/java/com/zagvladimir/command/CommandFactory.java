@@ -26,6 +26,7 @@ public class CommandFactory {
         commandMap.put(COMMAND_GET_GROUP, groupCommand);
         commandMap.put(COMMAND_SET_GROUP, groupCommand);
         commandMap.put(COMMAND_SCHEDULE, groupCommand);
+        commandMap.put(COMMAND_WEEKLY_SCHEDULE, groupCommand);
         commandMap.put(NOTIFICATIONS, notificationCommand);
     }
 

@@ -8,6 +8,7 @@ public class BotCommands {
     public static final String COMMAND_SET_GROUP = "/set_group";
     public static final String COMMAND_GET_GROUP = "/get_groups";
     public static final String COMMAND_SCHEDULE = "/get_schedule";
+    public static final String COMMAND_WEEKLY_SCHEDULE = "/get_weekly_schedule";
     public static final String NOTIFICATIONS = "/notifications";
 
 }
